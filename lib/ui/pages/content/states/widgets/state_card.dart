@@ -19,5 +19,25 @@ class StateCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //Implementa el widget con ayuda del instructor
+    return AppCard(
+        title: title,
+        content: Text(
+          content,
+          style: Theme.of(context).textTheme.bodyText1,
+        ),
+        topLeftWidget: SizedBox(
+          height: 40.0,
+          width: 48.0,
+          child: Center(
+              child: CircleAvatar(
+            minRadius: 14.0,
+            maxRadius: 14.0,
+            backgroundImage: NetworkImage(picUrl),
+          )),
+        ),
+        topRightWidget: IconButton(
+          icon: const Icon(Icons.chat_outlined, color: Colors.blue),
+          onPressed: onChat,
+        ));
   }
 }
