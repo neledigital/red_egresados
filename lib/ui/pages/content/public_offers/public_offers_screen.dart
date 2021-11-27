@@ -5,29 +5,39 @@ class PublicOffersScreen extends StatefulWidget {
   // PublicOffersScreen empty constructor
   const PublicOffersScreen({Key? key}) : super(key: key);
 
+  // Completa el código con las lineamientos del instructor
+  // ---------------------------------------
+  // 1. Crea los estados del widget usando createState()
+  // ---------------------------------------
   @override
   _State createState() => _State();
 }
 
+// ---------------------------------------
+// 2. Define el estado del Widget
+// ---------------------------------------
 class _State extends State<PublicOffersScreen> {
-  final items = List<String>.generate(20, (i) => "Item $i");
-
+  // ---------------------------------------
+  // 3. Genera la lista de datos que se mostrarán en cada card/tarjeta
+  // ---------------------------------------
+  final items = List<String>.generate(20, (i) => "item $i");
+  // 4. Define la estructura del widget utilizando el metodo Build
+  // ---------------------------------------
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: items.length,
-      itemBuilder: (context, index) {
-        return OfferCard(
-          title: 'Desarrollador backend de NodeJs',
-          content:
-              'Estamos buscando un desarrollador backend independiente de NodeJS para trabajar en el backend de una aplicación nativa de Android. Alguien que pueda ayudarnos en la creación de una aplicación móvil de redes sociales basada en video desde cero. Este sería un puesto remunerado con la opción de trabajar desde casa. Una oportunidad de aprender y desarrollar algo desde cero.',
-          arch: 'Android',
-          level: 'Experto',
-          payment: 3000000,
-          onCopy: () => {},
-          onApply: () => {},
-        );
-      },
-    );
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          return OfferCard(
+            title: 'Desarrollador backend de Flutter',
+            content:
+                'Estamos buscando un desarrollador freelance de fluter para trabajar con mision tic',
+            arch: 'Flutter',
+            level: 'Experto',
+            payment: 3500000,
+            onCopy: () => [],
+            onApply: () => [],
+          );
+        });
   }
 }
